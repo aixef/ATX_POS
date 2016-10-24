@@ -1,0 +1,944 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F6A73F0-69E8-44C0-9BAC-5E921F5AE0EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATX_POS</RootNamespace>
+    <AssemblyName>ATX_POS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1475246529_Shop.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9E43E3A7AF1DD55489AED816C745AC62EC5672FA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ATX_POS_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiproSoftware.WinUICore.Net20, Version=1.0.102.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net40\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PayPal, Version=1.7.3.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.7.3\lib\net40\PayPal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountsConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountsConfig.Designer.cs">
+      <DependentUpon>AccountsConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActiveSessions.Designer.cs">
+      <DependentUpon>ActiveSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTerminal.Designer.cs">
+      <DependentUpon>AddTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BANCOS.cs" />
+    <Compile Include="CashOutManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashOutManual.Designer.cs">
+      <DependentUpon>CashOutManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigUsers.Designer.cs">
+      <DependentUpon>ConfigUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Credentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credentials.Designer.cs">
+      <DependentUpon>Credentials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\CutBoxs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\CutBoxs.Designer.cs">
+      <DependentUpon>CutBoxs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\EstadisticsBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\EstadisticsBox.Designer.cs">
+      <DependentUpon>EstadisticsBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\CashCountOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\CashCountOut.Designer.cs">
+      <DependentUpon>CashCountOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\DetalleCorte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\DetalleCorte.Designer.cs">
+      <DependentUpon>DetalleCorte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\CashCount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\CashCount.Designer.cs">
+      <DependentUpon>CashCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coments.Designer.cs">
+      <DependentUpon>Coments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConexionSQL.cs" />
+    <Compile Include="Payments\DetailCashCount_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\DetailCashCount_2.Designer.cs">
+      <DependentUpon>DetailCashCount_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\DetailCashCount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\DetailCashCount.Designer.cs">
+      <DependentUpon>DetailCashCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLoginSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLoginSesion.Designer.cs">
+      <DependentUpon>FirstLoginSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFirst.Designer.cs">
+      <DependentUpon>LoginFirst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IForm.cs" />
+    <Compile Include="ImprimirTicket.cs" />
+    <Compile Include="Payments\PaymenCash.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\PaymenCash.Designer.cs">
+      <DependentUpon>PaymenCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\PaymentCredit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\PaymentCredit.Designer.cs">
+      <DependentUpon>PaymentCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\PaymentMix.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\PaymentMix.Designer.cs">
+      <DependentUpon>PaymentMix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments.Designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\PaymentVales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\PaymentVales.Designer.cs">
+      <DependentUpon>PaymentVales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\SalesInDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\SalesInDetail.Designer.cs">
+      <DependentUpon>SalesInDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCountingF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCountingF.Designer.cs">
+      <DependentUpon>RCountingF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCouting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCouting.Designer.cs">
+      <DependentUpon>RCouting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NAV_POSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NAV_POSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RePrintTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RePrintTicket.Designer.cs">
+      <DependentUpon>RePrintTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SistemaPos.Designer.cs">
+      <DependentUpon>SistemaPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyncPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncPayments.Designer.cs">
+      <DependentUpon>SyncPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyncSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncSales.Designer.cs">
+      <DependentUpon>SyncSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyncSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncSucursal.Designer.cs">
+      <DependentUpon>SyncSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynNav.cs" />
+    <Compile Include="Web References\AccountsFromNav\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CatalogoBancos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DataBranchNAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DataCompanyNAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GeneralJounsNAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GeneralJournalNAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemsListNAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ListBranchNAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MesureCodesFromNav\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PriceForItems\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TerminalsFromNAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\test2010\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_NAV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="YesAllNoAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YesAllNoAll.Designer.cs">
+      <DependentUpon>YesAllNoAll.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountsConfig.resx">
+      <DependentUpon>AccountsConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSessions.resx">
+      <DependentUpon>ActiveSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTerminal.resx">
+      <DependentUpon>AddTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashOutManual.resx">
+      <DependentUpon>CashOutManual.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigUsers.resx">
+      <DependentUpon>ConfigUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credentials.resx">
+      <DependentUpon>Credentials.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\CutBoxs.resx">
+      <DependentUpon>CutBoxs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\EstadisticsBox.resx">
+      <DependentUpon>EstadisticsBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\CashCount.resx">
+      <DependentUpon>CashCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coments.resx">
+      <DependentUpon>Coments.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\CashCountOut.resx">
+      <DependentUpon>CashCountOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\DetailCashCount_2.resx">
+      <DependentUpon>DetailCashCount_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\DetailCashCount.resx">
+      <DependentUpon>DetailCashCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLoginSesion.resx">
+      <DependentUpon>FirstLoginSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFirst.resx">
+      <DependentUpon>LoginFirst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\DetalleCorte.resx">
+      <DependentUpon>DetalleCorte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\PaymenCash.resx">
+      <DependentUpon>PaymenCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\PaymentCredit.resx">
+      <DependentUpon>PaymentCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\PaymentMix.resx">
+      <DependentUpon>PaymentMix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\PaymentVales.resx">
+      <DependentUpon>PaymentVales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Payments\SalesInDetail.resx">
+      <DependentUpon>SalesInDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCountingF.resx">
+      <DependentUpon>RCountingF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCouting.resx">
+      <DependentUpon>RCouting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RePrintTicket.resx">
+      <DependentUpon>RePrintTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SistemaPos.resx">
+      <DependentUpon>SistemaPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncPayments.resx">
+      <DependentUpon>SyncPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncSales.resx">
+      <DependentUpon>SyncSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncSucursal.resx">
+      <DependentUpon>SyncSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YesAllNoAll.resx">
+      <DependentUpon>YesAllNoAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ATX_POS_ClaveTemporal.pfx" />
+    <None Include="NAV_POSDataSet.xsc">
+      <DependentUpon>NAV_POSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NAV_POSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NAV_POSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NAV_POSDataSet.xss">
+      <DependentUpon>NAV_POSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\AccountsFromNav\CatalogoCuentasNav.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AccountsFromNav\CatalogoCuentasNav.wsdl" />
+    <None Include="Web References\AccountsFromNav\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CatalogoBancos\BancosSAT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CatalogoBancos\BancosSAT.wsdl" />
+    <None Include="Web References\CatalogoBancos\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DataBranchNAV\DataBranch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DataBranchNAV\DataBranch.wsdl" />
+    <None Include="Web References\DataBranchNAV\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DataCompanyNAV\DataCompany.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DataCompanyNAV\DataCompany.wsdl" />
+    <None Include="Web References\DataCompanyNAV\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GeneralJounsNAV\GeneralJourns.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GeneralJounsNAV\GeneralJourns.wsdl" />
+    <None Include="Web References\GeneralJounsNAV\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GeneralJournalNAV\GeneralJournalPOS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GeneralJournalNAV\GeneralJournalPOS.wsdl" />
+    <None Include="Web References\GeneralJournalNAV\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ItemsListNAV\ItemsList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ItemsListNAV\ItemsList.wsdl" />
+    <None Include="Web References\ItemsListNAV\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ListBranchNAV\ListBranch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ListBranchNAV\ListBranch.wsdl" />
+    <None Include="Web References\ListBranchNAV\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MesureCodesFromNav\MesureC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MesureCodesFromNav\MesureC.wsdl" />
+    <None Include="Web References\MesureCodesFromNav\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PriceForItems\PriceItems.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PriceForItems\PriceItems.wsdl" />
+    <None Include="Web References\PriceForItems\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TerminalsFromNAV\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TerminalsFromNAV\TerminalsListNAV.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TerminalsFromNAV\TerminalsListNAV.wsdl" />
+    <None Include="Web References\test2010\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\test2010\TestWS.wsdl" />
+    <None Include="Web References\WS_NAV\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_NAV\SalesOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS_NAV\SalesOrder.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\user-icon-png-pnglogocom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bg-wave-rays-blue-grey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\light-grey-background-pattern-i3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\schoolfreeware_Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1463715916_Cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1463716407_circle-dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1464294622_window-charts-graphs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Codeunit/TestWS%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\test2010\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Codeunit/TestWS%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_test2010_TestWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/BancosSAT%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CatalogoBancos\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/BancosSAT%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_CatalogoBancos_BancosSAT_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/CatalogoCuentasNav%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AccountsFromNav\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/CatalogoCuentasNav%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_AccountsFromNav_CatalogoCuentasNav_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/DataBranch%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DataBranchNAV\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/DataBranch%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_DataBranchNAV_DataBranch_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/DataCompany%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DataCompanyNAV\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/DataCompany%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_DataCompanyNAV_DataCompany_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/GeneralJournalPOS%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GeneralJournalNAV\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/GeneralJournalPOS%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_GeneralJournalNAV_GeneralJournalPOS_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/GeneralJourns%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GeneralJounsNAV\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/GeneralJourns%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_GeneralJounsNAV_GeneralJourns_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/ItemsList%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemsListNAV\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/ItemsList%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_ItemsListNAV_ItemsList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/ListBranch%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ListBranchNAV\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/ListBranch%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_ListBranchNAV_ListBranch_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/MesureC%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MesureCodesFromNav\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/MesureC%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_MesureCodesFromNav_MesureC_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/PriceItems%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PriceForItems\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/PriceItems%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_PriceForItems_PriceItems_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/SalesOrder%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_NAV\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/SalesOrder%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_WS_NAV_SalesOrder_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/TerminalsListNAV%3ftenant=gbl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TerminalsFromNAV\</RelPath>
+      <UpdateFromURL>https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/TerminalsListNAV%3ftenant=gbl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ATX_POS_TerminalsFromNAV_TerminalsListNAV_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Vara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Salud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\dollar-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\dollar-symbol64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\dollar-symbol2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1469240360_credit_cards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1469240780_coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1469240837_line_chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1469241149_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1469241184_Credit_Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\navonazurelogo_azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472459650_cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472460569_Database-Cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472460955_agency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472461239_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472459232_52_Cloud_Sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472461812_Bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472462819_weight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472463032_icon-130-cloud-upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472463468_dollar-exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472463246_file_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472463123_upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472463742_Database_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472611308_Cash_register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472611814_credit-cards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472611953_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472612063_advantage_payment_way.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472612285_cash_receiving.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472602250_user-group-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472768732_user_accounts_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472769247_cash_register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472782850_sign-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472783160_Remove-Male-User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472866314_Computer_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472866876_rotate_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1472867052_Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1473108859_free-29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1474428288_Application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\1474428767_gnome-session-logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1475246529_Shop.ico" />
+    <None Include="bin\Debug\1476239540_icon-79-document-cancel.png" />
+    <None Include="bin\Debug\1476229891_printer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

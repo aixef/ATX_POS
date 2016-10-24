@@ -1,0 +1,95 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ATX_POS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ATX_POS_WebService_Clientes_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/DynamicsNAV90/WS/ReplaceWithAPercentEncodedCompanyName/Page/Clientes</Value>
+    </Setting>
+    <Setting Name="ATX_POS_WebService_SystemService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/DynamicsNAV90/WS/SystemService</Value>
+    </Setting>
+    <Setting Name="ATX_POS_WebService_Timbrar" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/DynamicsNAV90/WS/ReplaceWithAPercentEncodedCompanyName/Codeunit/Timbrar</Value>
+    </Setting>
+    <Setting Name="ATX_POS_WebService_SalesOrder_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:9047/DynamicsNAV90/WS/ReplaceWithAPercentEncodedCompanyName/Page/SalesOrder</Value>
+    </Setting>
+    <Setting Name="ATX_POS_Webservices_SystemService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/SystemService</Value>
+    </Setting>
+    <Setting Name="ATX_POS_Webservices_powerbifinance_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/ReplaceWithAPercentEncodedCompanyName/Page/powerbifinance</Value>
+    </Setting>
+    <Setting Name="ATX_POS_Webservices_Timbrar" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/ReplaceWithAPercentEncodedCompanyName/Codeunit/Timbrar</Value>
+    </Setting>
+    <Setting Name="ATX_POS_Webservices_SalesOrder_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/ReplaceWithAPercentEncodedCompanyName/Page/SalesOrder</Value>
+    </Setting>
+    <Setting Name="ATX_POS_SalesPost80_SalesPost80" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/CRONUS%20Mexico%20S.A./Codeunit/SalesPost80</Value>
+    </Setting>
+    <Setting Name="ATX_POS_SalesPost80_Clientes_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/CRONUS%20Mexico%20S.A./Page/Clientes</Value>
+    </Setting>
+    <Setting Name="ATX_POS_SalesPost80_powerbifinance_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/CRONUS%20Mexico%20S.A./Page/powerbifinance</Value>
+    </Setting>
+    <Setting Name="ATX_POS_SalesPost80_SystemService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/CRONUS%20Mexico%20S.A./SystemService</Value>
+    </Setting>
+    <Setting Name="ATX_POS_ServicesSat_TestWS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/ReplaceWithAPercentEncodedCompanyName/Codeunit/TestWS</Value>
+    </Setting>
+    <Setting Name="ATX_POS_ServicesSat_BancosSAT_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://nav-ehc.sbs.atx.com.mx:9047/DynamicsNAV90/WS/ReplaceWithAPercentEncodedCompanyName/Page/BancosSAT</Value>
+    </Setting>
+    <Setting Name="NAV_POSConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=NAV-EHC\SQLEXPRESS;Initial Catalog=NAV_POS;Integrated Security=SSPI&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=NAV-EHC\SQLEXPRESS;Initial Catalog=NAV_POS;Integrated Security=SSPI</Value>
+    </Setting>
+    <Setting Name="ATX_POS_AccountsFromNav_CatalogoCuentasNav_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/CatalogoCuentasNav?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_CatalogoBancos_BancosSAT_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/BancosSAT?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_DataBranchNAV_DataBranch_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/DataBranch?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_DataCompanyNAV_DataCompany_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/DataCompany?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_GeneralJounsNAV_GeneralJourns_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/GeneralJourns?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_GeneralJournalNAV_GeneralJournalPOS_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/GeneralJournalPOS?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_ItemsListNAV_ItemsList_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/ItemsList?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_ListBranchNAV_ListBranch_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/ListBranch?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_MesureCodesFromNav_MesureC_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/MesureC?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_PriceForItems_PriceItems_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/PriceItems?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_TerminalsFromNAV_TerminalsListNAV_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/TerminalsListNAV?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_test2010_TestWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Codeunit/TestWS?tenant=gbl</Value>
+    </Setting>
+    <Setting Name="ATX_POS_WS_NAV_SalesOrder_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Page/SalesOrder?tenant=gbl</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/TestWS" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/TestWS" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/TestWS" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Hola">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Hola_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Registrar2">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Registrar2_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="DeleteBadPost">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="DeleteBadPost_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostJournal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostJournal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ClearJournal">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ClearJournal_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetNoItem">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="referenceCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetNoItem_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="Hola">
+    <part name="parameters" element="tns:Hola" />
+  </message>
+  <message name="Hola_Result">
+    <part name="parameters" element="tns:Hola_Result" />
+  </message>
+  <message name="Registrar2">
+    <part name="parameters" element="tns:Registrar2" />
+  </message>
+  <message name="Registrar2_Result">
+    <part name="parameters" element="tns:Registrar2_Result" />
+  </message>
+  <message name="DeleteBadPost">
+    <part name="parameters" element="tns:DeleteBadPost" />
+  </message>
+  <message name="DeleteBadPost_Result">
+    <part name="parameters" element="tns:DeleteBadPost_Result" />
+  </message>
+  <message name="PostJournal">
+    <part name="parameters" element="tns:PostJournal" />
+  </message>
+  <message name="PostJournal_Result">
+    <part name="parameters" element="tns:PostJournal_Result" />
+  </message>
+  <message name="ClearJournal">
+    <part name="parameters" element="tns:ClearJournal" />
+  </message>
+  <message name="ClearJournal_Result">
+    <part name="parameters" element="tns:ClearJournal_Result" />
+  </message>
+  <message name="GetNoItem">
+    <part name="parameters" element="tns:GetNoItem" />
+  </message>
+  <message name="GetNoItem_Result">
+    <part name="parameters" element="tns:GetNoItem_Result" />
+  </message>
+  <portType name="TestWS_Port">
+    <operation name="Hola">
+      <input name="Hola" message="tns:Hola" />
+      <output name="Hola_Result" message="tns:Hola_Result" />
+    </operation>
+    <operation name="Registrar2">
+      <input name="Registrar2" message="tns:Registrar2" />
+      <output name="Registrar2_Result" message="tns:Registrar2_Result" />
+    </operation>
+    <operation name="DeleteBadPost">
+      <input name="DeleteBadPost" message="tns:DeleteBadPost" />
+      <output name="DeleteBadPost_Result" message="tns:DeleteBadPost_Result" />
+    </operation>
+    <operation name="PostJournal">
+      <input name="PostJournal" message="tns:PostJournal" />
+      <output name="PostJournal_Result" message="tns:PostJournal_Result" />
+    </operation>
+    <operation name="ClearJournal">
+      <input name="ClearJournal" message="tns:ClearJournal" />
+      <output name="ClearJournal_Result" message="tns:ClearJournal_Result" />
+    </operation>
+    <operation name="GetNoItem">
+      <input name="GetNoItem" message="tns:GetNoItem" />
+      <output name="GetNoItem_Result" message="tns:GetNoItem_Result" />
+    </operation>
+  </portType>
+  <binding name="TestWS_Binding" type="tns:TestWS_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Hola">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/TestWS:Hola" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Hola">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Hola_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Registrar2">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/TestWS:Registrar2" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Registrar2">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Registrar2_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="DeleteBadPost">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/TestWS:DeleteBadPost" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="DeleteBadPost">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="DeleteBadPost_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostJournal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/TestWS:PostJournal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostJournal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostJournal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ClearJournal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/TestWS:ClearJournal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ClearJournal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ClearJournal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetNoItem">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/TestWS:GetNoItem" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetNoItem">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetNoItem_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="TestWS">
+    <port name="TestWS_Port" binding="tns:TestWS_Binding">
+      <address location="https://navonazure1.cloudapp.net:7047/DynamicsNAV90/WS/GBL/Codeunit/TestWS?tenant=gbl" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>
